@@ -9,19 +9,18 @@
         }
     },
 
-    // Executa comandos automaticamente logo após o container ser criado e iniciado
-    "postCreateCommand": "sudo service postgresql start && psql -U postgres -f schema.sql && psql -U postgres -f data.sql",
+    // Usa o script de inicialização nativo que funciona perfeitamente em ambientes sem o systemd/service completo
+    "postCreateCommand": "sudo /etc/init.d/postgresql start && psql -U postgres -f schema.sql && psql -U postgres -f data.sql",
 
     // Configurações do VS Code dentro do Codespace
     "customizations": {
         "vscode": {
             "extensions": [
-                "mtxr.sqltools", // Extensão excelente para gerenciar bancos graficamente, se quiserem
+                "mtxr.sqltools",
                 "mtxr.sqltools-driver-pg"
             ]
         }
     },
 
-    // Garante que o container rode com o usuário correto para não dar erro de permissão no psql
     "remoteUser": "vscode"
 }
