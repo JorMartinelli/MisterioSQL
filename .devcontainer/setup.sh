@@ -3,14 +3,15 @@ set -euo pipefail
 
 echo "[setup] Starting post-create setup..."
 
-# Garante que o PostgreSQL vai reiniciar do zero de forma limpa no container
-echo "[setup] Restarting PostgreSQL service..."
-sudo /etc/init.d/postgresql restart || (sudo /etc/init.d/postgresql stop && sudo /etc/init.d/postgresql start)
+# 1. GERENCIAMENTO DO BANCO DE DADOS
+# Inicia o serviço do PostgreSQL de forma limpa
+echo "[setup] Starting PostgreSQL service..."
+sudo /etc/init.d/postgresql start
 
-# Aguarda o banco estabilizar as conexões locais
-sleep 3
+# Aguarda 2 segundos para o banco abrir o socket local com segurança
+sleep 2
 
-# Cria a estrutura e injeta as pistas do mistério na raiz do workspace
+# Cria a estrutura e insere as pistas usando o usuário padrão 'postgres' sem senha
 echo "[setup] Loading Expresso do Oriente database schemas and data..."
 if [ -f "schema.sql" ] && [ -f "data.sql" ]; then
     psql -U postgres -f schema.sql
@@ -20,6 +21,7 @@ else
     echo "[setup] Warning: schema.sql or data.sql not found in workspace root."
 fi
 
+# 2. CONFIGURAÇÕES DE AMBIENTE (PYTHON & JUPYTER)
 # Ensure ~/.local/bin is on PATH for user-installed Python scripts
 if ! echo "$PATH" | tr ':' '\n' | grep -qx "$HOME/.local/bin"; then
   if ! grep -q 'export PATH="$HOME/.local/bin:$PATH"' "$HOME/.bashrc" 2>/dev/null; then
@@ -47,6 +49,7 @@ except Exception as e:
     print(f"[setup] ipykernel install skipped/failed: {e}")
 PY
 
+# 3. CONFIGURAÇÕES DE AMBIENTE (RECURSOS DE R)
 # R setup: per-user library path and selective package install
 echo "[setup] Configuring R user library and installing common packages (idempotent)..."
 mkdir -p "$HOME/R/library"

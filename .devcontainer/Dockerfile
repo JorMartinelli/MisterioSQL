@@ -51,10 +51,15 @@ RUN R -e "install.packages(c('IRkernel', 'languageserver'), repos='https://cloud
 # Registrar o kernel R no Jupyter
 RUN R -e "IRkernel::installspec(user = FALSE)"
 
-# Criar usuário vscode
+# Criar usuário vscode (compatível com Codespaces)
 RUN useradd -m -s /bin/bash vscode && \
     usermod -aG sudo vscode && \
     echo "vscode ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+# --- AS DUAS LINHAS NOVAS ESTÃO AQUI ---
+# Configura o Postgres para aceitar conexões locais do usuário vscode sem senha
+RUN sed -i "s/local.*all.*postgres.*peer/local all postgres trust/g" /etc/postgresql/16/main/pg_hba.conf && \
+    echo "local all vscode trust" >> /etc/postgresql/16/main/pg_hba.conf
 
 # Configurar diretório de trabalho
 WORKDIR /workspaces
