@@ -1,18 +1,12 @@
 {
-    "name": "Mistério no Expresso do Oriente - SQL",
+    "name": "Misterio SQL - Expresso do Oriente",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    
-    // Instala o PostgreSQL automaticamente como uma Feature do Dev Container
     "features": {
         "ghcr.io/devcontainers/features/postgres:1": {
             "version": "16"
         }
     },
-
-    // Usa o script de inicialização nativo que funciona perfeitamente em ambientes sem o systemd/service completo
-    "postCreateCommand": "sudo /etc/init.d/postgresql start && psql -U postgres -f schema.sql && psql -U postgres -f data.sql",
-
-    // Configurações do VS Code dentro do Codespace
+    "postCreateCommand": "sudo /etc/init.d/postgresql start && sleep 5 && psql -U postgres -f schema.sql && psql -U postgres -f data.sql",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -21,6 +15,5 @@
             ]
         }
     },
-
     "remoteUser": "vscode"
 }
