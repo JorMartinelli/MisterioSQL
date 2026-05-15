@@ -9,10 +9,12 @@ Para iniciar o mistério no seu ambiente, siga os passos abaixo no terminal do s
    sudo service postgresql start
 
 2. **Carregue o esquema e os dados do crime:**
-    ``` psql -U postgres -f setup.sql
+    ```bash
+    psql -U postgres -f setup.sql
 
 3. **Acesse o terminal interativo para começar as consultas:**
-    ``` psql -U postgres
+    ```bash
+    psql -U postgres
 
 4. **Dica de detetive:** Use \dt para listar as tabelas disponíveis e \d nome_da_tabela para entender os metadados (colunas) de cada pista.
 
