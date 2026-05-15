@@ -1,12 +1,20 @@
 {
-    "name": "Misterio SQL - Expresso do Oriente",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {
-        "ghcr.io/devcontainers/features/postgres:1": {
-            "version": "16"
-        }
-    },
-    "onCreateCommand": "sudo /etc/init.d/postgresql start",
-    "postAttachCommand": "sleep 3 && psql -U postgres -f schema.sql && psql -U postgres -f data.sql",
-    "remoteUser": "vscode"
+  "name": "Mistério no Expresso do Oriente - SQL",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "bash .devcontainer/setup.sh"
 }
