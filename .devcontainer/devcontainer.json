@@ -6,14 +6,7 @@
             "version": "16"
         }
     },
-    "postCreateCommand": "sudo /etc/init.d/postgresql start && sleep 5 && psql -U postgres -f schema.sql && psql -U postgres -f data.sql",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "mtxr.sqltools",
-                "mtxr.sqltools-driver-pg"
-            ]
-        }
-    },
+    "onCreateCommand": "sudo /etc/init.d/postgresql start",
+    "postAttachCommand": "sleep 3 && psql -U postgres -f schema.sql && psql -U postgres -f data.sql",
     "remoteUser": "vscode"
 }
