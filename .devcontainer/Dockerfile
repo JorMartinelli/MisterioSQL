@@ -5,6 +5,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends postgresql postgresql-contrib \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Altera as regras do pg_hba.conf lidando corretamente com tabulações e espaços
-RUN sed -i -E "s/local[[:space:]]+all[[:space:]]+all[[:space:]]+peer/local   all             all                                     trust/g" /etc/postgresql/14/main/pg_hba.conf \
-    && sed -i -E "s/host[[:space:]]+all[[:space:]]+all[[:space:]]+127.0.0.1\/32[[:space:]]+scram-sha-256/host    all             all             127.0.0.1\/32            trust/g" /etc/postgresql/14/main/pg_hba.conf
+# Limpa o arquivo hba original e força regras explícitas de confiança total para o ambiente de desenvolvimento
+RUN echo "local   all             all                                     trust" > /etc/postgresql/14/main/pg_hba.conf \
+    && echo "host    all             all             127.0.0.1/32            trust" >> /etc/postgresql/14/main/pg_hba.conf \
+    && echo "host    all             all             ::1/128                 trust" >> /etc/postgresql/14/main/pg_hba.conf
