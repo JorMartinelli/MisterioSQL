@@ -1,5 +1,9 @@
 # 🚂 Mistério no Expresso do Oriente: Um Crime em SQL
 
+> 📖 *“O impossível não pode ter acontecido; portanto, o impossível deve ser possível, apesar das aparências.”* — **Hercule Poirot**
+>
+> Este projeto é uma homenagem interativa à genialidade de **Agatha Christie**, a eterna Rainha do Crime. O cenário, os personagens e a trama foram inspirados em sua obra-prima de 1934, *Assassinato no Expresso do Oriente*. Aqui, a lógica dedutiva do icônico detetive belga ganha vida através de consultas SQL. Prepare sua mente, ajuste seus bigodes e boa investigação!
+
 ## 💻 Como Jogar
 
 1. Clique no botão verde **"Code"** e crie um **Codespace**.
