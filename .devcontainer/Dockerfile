@@ -46,7 +46,6 @@ RUN pip3 install --no-cache-dir --break-system-packages \
     psycopg2-binary
 
 # Instalar pacotes R necessários
-RUN R -e "install.packages(c('IRkernel', 'languageserver'), repos='https://cloud.r-project.org', Ncpus=2)"
 
 # Registrar o kernel R no Jupyter
 RUN R -e "IRkernel::installspec(user = FALSE)"
