@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# Aguarda o PostgreSQL iniciar completamente usando o caminho absoluto caso necessário
+# Garante que o serviço do Postgres no Ubuntu está ligado
+sudo service postgresql start
+
+# Aguarda o banco ficar pronto para conexões locais
 until pg_isready -h localhost -U postgres -q; do
   echo "Aguardando o banco de dados iniciar..."
   sleep 2

@@ -1,15 +1,10 @@
 {
     "name": "Misterio no Expresso do Oriente",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-    
-    // Injeta o PostgreSQL limpo e configura os caminhos automaticamente
-    "features": {
-        "ghcr.io/devcontainers/features/postgres:1": {
-            "version": "15"
-        }
+    "build": {
+        "dockerfile": "Dockerfile"
     },
     
-    // Executa nosso script de inicialização assim que o container estiver pronto
+    // Roda nosso script para estruturar o banco de dados
     "postStartCommand": "bash .devcontainer/post-start.sh",
 
     "customizations": {
