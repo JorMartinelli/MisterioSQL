@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Inicia o servidor do PostgreSQL em background (usando a ferramenta de inicialização nativa do Postgres)
-pg_ctlcluster 14 main start
+# Inicia o serviço do PostgreSQL usando o comando padrão do sistema
+sudo service postgresql start
 
-# Aguarda o banco ficar totalmente online
+# Aguarda o banco ficar totalmente online (agora usando a regra de confiança sem senha)
 until pg_isready -U postgres -q; do
   echo "Aguardando o banco de dados iniciar..."
   sleep 2
