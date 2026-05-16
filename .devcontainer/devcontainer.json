@@ -1,20 +1,22 @@
 {
-  "name": "Mistério no Expresso do Oriente - SQL",
+  "name": "Misterio SQL",
+
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".."
   },
+
   "customizations": {
     "vscode": {
       "extensions": [
+        "ms-ossdata.vscode-postgresql",
         "mtxr.sqltools",
         "mtxr.sqltools-driver-pg"
-      ],
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash"
-      }
+      ]
     }
   },
-  "remoteUser": "vscode",
-  "postCreateCommand": "bash .devcontainer/setup.sh"
+
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+
+  "remoteUser": "vscode"
 }

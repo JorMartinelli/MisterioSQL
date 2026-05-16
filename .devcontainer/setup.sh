@@ -1,36 +1,30 @@
-```bash id="lx4eyq"
+```bash id="8i0mcc"
 #!/usr/bin/env bash
-set -euo pipefail
 
-echo "[setup] Starting post-create setup..."
+set -e
 
-echo "[setup] Starting PostgreSQL service..."
+echo "[setup] Starting PostgreSQL..."
+
 sudo service postgresql start
 
 sleep 3
 
-echo "[setup] Creating database 'expresso'..."
+echo "[setup] Creating database..."
+
 createdb -U postgres expresso || true
 
-echo "[setup] Loading database schemas and data..."
+echo "[setup] Loading schema..."
 
-if [ -f "setup.sql" ] && [ -f "data.sql" ]; then
+psql -U postgres -d expresso -f setup.sql
 
-    psql -U postgres -d expresso -f setup.sql
-    psql -U postgres -d expresso -f data.sql
+echo "[setup] Loading data..."
 
-    echo "[setup] Database loaded successfully!"
-
-else
-    echo "[setup] Warning: setup.sql or data.sql not found."
-fi
+psql -U postgres -d expresso -f data.sql
 
 echo ""
-echo "[setup] ========================================"
-echo "[setup] Setup finished successfully!"
-echo "[setup] Connect using:"
+echo "[setup] ====================================="
+echo "[setup] Database ready!"
+echo "[setup] Run:"
 echo "[setup] psql -U postgres -d expresso"
-echo "[setup] ========================================"
-```
-
+echo "[setup] ====================================="
 ```
