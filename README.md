@@ -6,7 +6,7 @@
 2. Aguarde o terminal terminar de carregar (o banco de dados e as pistas serão injetados sozinhos).
 3. No terminal, digite apenas:
    ```bash
-   psql -U postgres
+   psql -U postgres -d expresso
 
 4. **Dica de detetive:** Use \dt para listar as tabelas disponíveis e \d nome_da_tabela para entender os metadados (colunas) de cada pista.
 

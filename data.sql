@@ -7,6 +7,8 @@ INSERT INTO cabines VALUES ('002', 'Primeira Classe', 'A', 'Trancada por dentro'
 INSERT INTO cabines VALUES ('003', 'Primeira Classe', 'A', 'Aberta');
 INSERT INTO cabines VALUES ('004', 'Primeira Classe', 'A', 'Aberta');
 INSERT INTO cabines VALUES ('009', 'Segunda Classe', 'B', 'Aberta');
+INSERT INTO cabines VALUES ('010', 'Segunda Classe', 'B', 'Aberta');
+INSERT INTO cabines VALUES ('011', 'Segunda Classe', 'B', 'Aberta');
 
 -- Passageiros (Baseado no livro)
 INSERT INTO passageiros (nome, codinome, profissao, nacionalidade, cidade_origem, num_cabine, bagagem_principal, preferencia_jantar) VALUES 

@@ -58,8 +58,9 @@ RUN useradd -m -s /bin/bash vscode && \
 
 # --- AS DUAS LINHAS NOVAS ESTÃO AQUI ---
 # Configura o Postgres para aceitar conexões locais do usuário vscode sem senha
-RUN sed -i "s/local.*all.*postgres.*peer/local all postgres trust/g" /etc/postgresql/16/main/pg_hba.conf && \
-    echo "local all vscode trust" >> /etc/postgresql/16/main/pg_hba.conf
+RUN PG_VERSION=$(ls /etc/postgresql) && \
+    sed -i "s/local.*all.*postgres.*peer/local all postgres trust/g" /etc/postgresql/$PG_VERSION/main/pg_hba.conf && \
+    echo "local all vscode trust" >> /etc/postgresql/$PG_VERSION/main/pg_hba.conf
 
 # Configurar diretório de trabalho
 WORKDIR /workspaces
