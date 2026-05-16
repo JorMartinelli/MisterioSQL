@@ -1,22 +1,20 @@
 {
-  "name": "Misterio SQL",
+    "name": "Mistério no Expresso do Oriente",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    
+    // Executa nosso script de inicialização assim que o container subir
+    "postStartCommand": "bash .devcontainer/post-start.sh",
 
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
+    // Configurações úteis para o VS Code dentro do Codespace
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "mtxr.sqltools",
+                "mtxr.sqltools-driver-pg",
+                "ckearnell.mrdark"
+            ]
+        }
+    },
 
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-ossdata.vscode-postgresql",
-        "mtxr.sqltools",
-        "mtxr.sqltools-driver-pg"
-      ]
-    }
-  },
-
-  "postCreateCommand": "bash .devcontainer/setup.sh",
-
-  "remoteUser": "vscode"
+    "remoteUser": "codespace"
 }

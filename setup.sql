@@ -36,7 +36,7 @@ CREATE TABLE depoimentos (
 
 CREATE TABLE registro_movimentacao (
     id_mov INT PRIMARY KEY,
-    id_passaporte INT REFERENCES passageiros(id_passaporte),
+    id_passaporte INT NOT NULL REFERENCES passageiros(id_passaporte),
     local_visto VARCHAR(50),
     horario_visto TIME,
     detalhe_observado VARCHAR(255)
