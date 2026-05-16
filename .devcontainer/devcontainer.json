@@ -1,11 +1,17 @@
 {
-    "name": "Mistério no Expresso do Oriente",
-    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "name": "Misterio no Expresso do Oriente",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
     
-    // Executa nosso script de inicialização assim que o container subir
+    // Injeta o PostgreSQL limpo e configura os caminhos automaticamente
+    "features": {
+        "ghcr.io/devcontainers/features/postgres:1": {
+            "version": "15"
+        }
+    },
+    
+    // Executa nosso script de inicialização assim que o container estiver pronto
     "postStartCommand": "bash .devcontainer/post-start.sh",
 
-    // Configurações úteis para o VS Code dentro do Codespace
     "customizations": {
         "vscode": {
             "extensions": [
@@ -16,5 +22,5 @@
         }
     },
 
-    "remoteUser": "codespace"
+    "remoteUser": "vscode"
 }
