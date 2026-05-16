@@ -47,9 +47,6 @@ RUN pip3 install --no-cache-dir --break-system-packages \
 
 # Instalar pacotes R necessários
 
-# Registrar o kernel R no Jupyter
-RUN R -e "IRkernel::installspec(user = FALSE)"
-
 # Criar usuário vscode (compatível com Codespaces)
 RUN useradd -m -s /bin/bash vscode && \
     usermod -aG sudo vscode && \
