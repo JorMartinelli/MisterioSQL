@@ -18,13 +18,15 @@
 
 ## 🎮 Como Submeter Suas Respostas
 
-Ao final de cada capítulo investigativo, você precisará submeter seus palpites sobre o assassino:
+Ao final de cada capítulo investigativo, você precisará submeter seus palpites sobre o assassino.
 
 > ⚠️ **IMPORTANTE:** Leia cada capítulo na sequência. Não pule para o próximo capítulo sem ter completado o atual. A narrativa revela-se progressivamente, e pular etapas pode comprometer sua experiência de investigação.
 
-Quando você achar que descobriu quem matou Cassetti, procure pelo nome no arquivo criminal e nos registros de movimentação. Compare os dados. Confronte as evidências.
 
-> 💡 Se você chegar a uma conclusão prematura, as pistas podem levá-lo a um caminho inesperado...
+> 💡Quando você achar que descobriu quem matou Cassetti, procure pelo nome no arquivo criminal e nos registros de movimentação. Compare os dados. Confronte as evidências. Se você chegar a uma conclusão prematura, as pistas podem levá-lo a um caminho inesperado...
+
+## ❄️ Prólogo 
+
 O inverno de 1934 congelava os trilhos da estação de Istambul, mas o interior do Expresso do Oriente exalava luxo, fumaça de tabaco e mistério. Hercule Poirot, o renomado detetive belga, conseguiu uma cabine de última hora graças a um favor antigo. Olhando ao redor do vagão-restaurante, Poirot observou seus companheiros de viagem: uma princesa russa, um coronel britânico, uma governanta enigmática, um vendedor de carros americano e seu patrão, o antipático Sr. Ratchett.
 
 Naquela mesma noite, o Sr. Ratchett procurou Poirot. Parecia apavorado. *"Estão me ameaçando, detetive. Pago-lhe vinte mil dólares para me proteger."* Poirot recusou, alegando que não gostava da cara do americano. Poucas horas depois, uma violenta nevasca bloqueou os trilhos na Iugoslávia. O trem parou no meio do nada. E o silêncio da noite foi cortado por um grito abafado.
@@ -45,7 +47,7 @@ Poirot ajusta seus bigodes e caminha até o corpo. No chão da cabine, as cinzas
 
 Poirot começa os interrogatórios. Todos os passageiros têm um álibi, mas os dados não mentem. É hora de confrontar os depoimentos com os horários de movimentação das cabines registrados pelo condutor.
 
-> 📝 **Sua missão:** Cruze a tabela de depoimentos dos passageiros com a tabela de ocupação de cabines. Quem estava fora do seu lugar ou mentiu sobre onde passou a madrugada à 01:15?
+> 📝 **Sua missão:** Cruze a tabela de depoimentos dos passageiros com a tabela de movimentações. Quem estava fora da sua cabine ou mentiu sobre onde passou a madrugada à 01:15?
 
 ---
 
@@ -54,7 +56,7 @@ Ao revistar o vagão-restaurante, a Sra. Hubbard encontra uma faca de cozinha en
 
 Poirot examina meticulosamente o corredor fora da cabine 002. Há marcas de roupão e umidade no chão. Um detalhes não escapa ao detetive belga.
 
-> 🔎 **Sua missão:** Procure registros de testemunhas que viram alguém se movimentando na hora do crime. Onde estava cada passageiro? Quem foi visto saindo da cabine 002?
+> 🔎 **Sua missão:** Procure registros de testemunhas que viram alguém se movimentando na hora do crime. Quem foi visto saindo da cabine 002?
 
 ## 🔐 Capítulo 4: O Suspeito Perfeito
 Enquanto Poirot revisa os registros de movimentação, um nome se destaca. Um passageiro de primeira classe, alguém com antecedentes criminais que o conectam diretamente ao caso Armstrong. Seus antecedentes criminais o conectam ao sequestro de Daisy Armstrong em 1930. 
@@ -63,20 +65,9 @@ Testemunhas o viram saindo da cabine 002 com uma faca ensanguentada à 01:15 da 
 
 Poirot reúne todos os dados: crime, arma, motivo, oportunidade. Tudo aponta para este homem de primeira classe.
 
-> 🎯 **Sua investigação:** Procure nos registros de passageiros de primeira classe. Consulte os arquivos criminais. Encontre a conexão com Cassetti e Armstrong. Procure os registros de movimentação que o mostram saindo da cabine 002.
+> 🎯 **Sua investigação:** Procure nos registros de passageiros de primeira classe. Consulte os arquivos criminais. Encontre a conexão do suspeito e o caso Armstrong. Procure os registros de movimentação que o mostram saindo da cabine 002.
 
 ---
-
-## ⚠️ Capítulo 5: O Detalhe que Não Encaixa
-Hercule Poirot bate o dedo na mesa, seus olhos azuis brilhando. *"Curiosa,"* murmura. *"Muito curiosa, de fato."*
-
-Um passageiro relatou ter visto o suspeito em **dois locais diferentes, no mesmo horário exato**. Uma testemunha o viu no Corredor do Vagão A à 01:15. Outra testemunha jura tê-lo visto no Vagão Restaurante, também à 01:15, bebendo cerveja tranquilamente.
-
-É fisicamente impossível estar em dois lugares simultaneamente.
-
-Poirot inclina-se para você: *"Mon ami, talvez tenhamos perseguido a pista errada. Ou talvez o assassino queira que acreditemos nisso."*
-
-> 🤔 **Sua investigação:** Procure discrepâncias nos registros de movimentação do passageiro que você suspeita. Que contradições encontra? Ele realmente estava onde diz estar? Verifique duas vezes os horários e locais.
 
 >💡 Hora de dar o seu palpite! Acha que desvendou o caso? Consulte a tabela solucao para verificar sua teoria. Digite o nome do seu suspeito exatamente como aparece no banco de dados para ver se você está no caminho certo:
 
@@ -84,7 +75,16 @@ Poirot inclina-se para você: *"Mon ami, talvez tenhamos perseguido a pista erra
 SELECT mensagem FROM solucao WHERE assassino = 'Nome do Suspeito';
 ```
 
+## ⚠️ Capítulo 5: O Detalhe que Não Encaixa
+Hercule Poirot bate o dedo na mesa, seus olhos azuis brilhando. *"Curiosa,"* murmura. *"Muito curiosa, de fato."*
 
+O suspeito foi visto em **dois locais diferentes, no mesmo horário exato**. Uma testemunha o viu no Corredor do Vagão A à 01:15. Outra testemunha jura tê-lo visto no Vagão Restaurante, também à 01:15, bebendo cerveja tranquilamente.
+
+É fisicamente impossível estar em dois lugares simultaneamente.
+
+Poirot inclina-se para você: *"Mon ami, talvez tenhamos perseguido a pista errada. Ou talvez o assassino queira que acreditemos nisso."*
+
+> 🤔 **Sua investigação:** Procure discrepâncias nos registros de movimentação do passageiro que você suspeita. Que contradições encontra? Ele realmente estava onde diz estar? Verifique duas vezes os horários e locais.
 
 ---
 
@@ -106,17 +106,15 @@ Ele pausa, deixando a frase incompleta.
 ---
 
 ## 🕵️ Capítulo 7: O Padrão Oculto
+Reunidos no vagão-restaurante, Poirot olha para cada um dos suspeitos. *"A verdade"*, diz ele, *"é como um mosaico cujas peças vocês uniram através de suas consultas SQL."*
+
 Agora que você questionou tudo, Poirot revela um detalhe sutil: no arquivo criminal, há vários registros que mencionam "investigação conectada ao caso Armstrong". 
 
 Alguns passageiros têm conexões obscuras:
 - Relacionamentos familiares não revelados
-- Movimentos de fundos suspeitos
-- Profissões que exigem habilidades específicas
 - Laços emocionais com a família Armstrong
 
 Não é óbvio. Não é direto. Mas está tudo ali.
-
-*"Compreende agora?"* pergunta Poirot. *"Cada peça do mosaico. Cada um dos passageiros. Talvez eles saibam algo que vocês não saibam. Talvez eles estejam conectados por algo mais profundo do que crime comum."*
 
 > 🧩 **Sua missão final:** 
 > - Procure por TODOS os passageiros com registros no arquivo criminal conectados a Armstrong
@@ -137,6 +135,10 @@ Poirot oferece você uma oportunidade: identifique todos aqueles que estavam env
 *"Se conseguir nomear cada um deles—realmente cada um—então terá dominado a arte da dedução lógica. A verdade não é um culpado. A verdade é um círculo de mãos."*
 
 > 🎯 **Desafio Final:** Você precisa identificar TODOS os assassinos. Um por um. Cada nome. Cada motivo. Cada gesto de vindita. Se conseguir, terá resolvido o mistério como Hercule Poirot o fez—e merecia ser resolvido.
+
+Se você seguiu as pistas corretamente, descobriu que as peças do banco de dados revelam que não houve apenas um assassino.
+
+> ⚖️ **O veredito final:** Execute a consulta definitiva que une a vítima, a arma, os álibis quebrados e a vingança. Quem deu as facadas?
 
 >💡 Como submeter seu veredito: Para encerrar o caso, você deve consultar a tabela solucao inserindo os nomes de todos os culpados que você encontrou.
 
@@ -185,12 +187,29 @@ LEFT JOIN registro_movimentacao r ON p.id_passaporte = r.id_passaporte;
 ---
 </details>
 
-## 🎭 Uma Nota sobre a Verdade
+---
 
-*"A verdade,"* como Hercule Poirot costuma dizer, *"é frequentemente mais interessante que a ficção."*
+## ❄️ Capítulo Extra: O Dilema de Hercule Poirot
 
-Neste mistério, cada pista está plantada. Cada dado tem significado. Cada inconsistência aponta para algo. O desafio não é encontrar respostas—as respostas estão lá. O desafio é compreender **por que** as respostas são o que são.
+Os motores do Expresso do Oriente continuam silenciosos sob o gelo da Iugoslávia, mas a fumaça das suas células cinzentas já decifrou o enigma. Você confrontou os doze passageiros. Eles não negam o que fizeram. O Sr. Ratchett era Cassetti, um monstro que a lei não conseguiu alcançar, e a justiça foi feita pelas mãos daqueles que ele destruiu.
 
-Boa sorte, detetive.
+Agora, os faróis dos veículos da polícia iugoslava começam a piscar ao longe, cortando a nevasca. Eles estão chegando.
+
+Poirot ajeita seu casaco, olha para o círculo de mãos formadas pelos passageiros e depois se vira para você, seu fiel assistente:
+
+> ⚖️ *“Mon ami, a justiça humana exige um culpado atrás das grades. Mas a justiça divina... ah, essa é mais complexa. Temos duas verdades para entregar à polícia. A escolha é nossa.”*
+
+### 📋 As Duas Versões:
+
+1. **A Primeira Solução (O Estranho Intruso):** Um assassino desconhecido, disfarçado com um roupão escarlate, entrou no trem na estação anterior, apunhalou Cassetti na calada da noite e escapou saltando do vagão em meio à nevasca iugoslava. Os passageiros estão inocentes.
+2. **A Segunda Solução (A Verdade dos Dados):** O círculo de doze passageiros planejou e executou o veredito de Cassetti juntos. Todos devem ser entregues à justiça e enfrentar o tribunal de Belgrado.
 
 ---
+
+> 🧠 **Para Refletir:** Se você estivesse no lugar de Poirot, qual versão contaria para as autoridades? Você protegeria o círculo de mãos que buscou vingança por Daisy Armstrong, ou seguiria a lei rigidamente, entregando todos os doze à polícia?
+
+Se você escolheu proteger o segredo deles e apoiar a decisão histórica de Poirot, execute a query final de arquivamento no seu terminal para encerrar oficialmente o caso:
+
+```sql
+-- Caso encerrado. O assassino fugiu pela neve...
+SELECT 'O caso está formalmente arquivado. Boa viagem, detetive.' AS veredito_final;
