@@ -49,3 +49,9 @@ CREATE TABLE arquivos_criminais (
     ano_ocorrencia INT,
     status_justica VARCHAR(50)
 );
+
+CREATE TABLE solucao (
+    id SERIAL PRIMARY KEY,
+    assassino TEXT,   -- Nomes em ordem alfabética, separados por vírgula
+    mensagem TEXT
+);
