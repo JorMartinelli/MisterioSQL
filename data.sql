@@ -73,7 +73,7 @@ INSERT INTO arquivos_criminais (nome_alvo, crime_cometido, ano_ocorrencia, statu
 ('Countess Andrenyi', 'Investigação de conexão familiar com envolvida em caso de sequestro de 1930 da família Armstrong.', 1930, 'Aberto'),
 ('Rudolf Hoffman', 'Roubo a mão armada em estações de trem.', 1923, 'Foragido'),
 ('Françoise Moreau', 'Roubo de joias de sua mãe. Tentou venda no mercado negro.', 1929, 'Encarcerado'),
-('Helene Armstrong', 'Viúva de vítima colateral. Envolvimento em caso criminal que destruiu sua família.', 1930, 'Aberto'),
+('Helene Armstrong', 'Viúva de vítima colateral do caso Armstrong. Envolvimento em caso criminal que destruiu sua família.', 1930, 'Aberto'),
 ('Alexei Volkov', 'Assassinato por encargo. Contratado para eliminar rivais políticos.', 1926, 'Foragido'),
 ('Beatrice Winterthur', 'Fraude matrimonial. Casava com homens ricos e desaparecia com fortuna.', 1927, 'Foragido'),
 ('Vladimir Armstrong', 'Parente de vítima de sequestro de 1930. Possível envolvimento em investigação privada sobre o caso Armstrong.', 1930, 'Aberto'),
