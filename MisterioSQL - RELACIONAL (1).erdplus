@@ -1,0 +1,451 @@
+{
+  "diagramType": 2,
+  "data": {
+    "nodes": [
+      {
+        "id": "e4381605-a55f-42fe-b8c2-e82d6c61f30a",
+        "type": "Table",
+        "position": {
+          "x": 1339.6281200871358,
+          "y": 231.29982311191173
+        },
+        "data": {
+          "label": "arquivos_criminais",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c515f8d4-47f2-44d0-9eca-f3c17cdb7304",
+              "name": "id_caso",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "718b38dd-78c5-4219-a88f-54be99819334",
+              "name": "nome_alvo",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "55ecef0c-52d6-4568-ba5f-b57de807436e",
+              "name": "crime_cometido",
+              "type": "VARCHAR(n)",
+              "position": 0
+            },
+            {
+              "id": "b69ba019-e277-488c-91f4-7f0400601480",
+              "name": "ano_ocorrencia",
+              "type": "DATE",
+              "position": 0
+            },
+            {
+              "id": "4c03790a-36fd-4a4b-bec9-256ec79e2446",
+              "name": "status_justica",
+              "type": "VARCHAR(n)",
+              "position": 0
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 151
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "70ad1117-0ef6-4d20-8f07-cf9e90a23744",
+        "type": "Table",
+        "position": {
+          "x": 1644.595816950667,
+          "y": 407.05746454917835
+        },
+        "data": {
+          "label": "cabines",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "110245fb-aa8c-4052-81c4-eba2cb5ebc25",
+              "name": "num_cabine",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "2639981f-3ce6-41c8-bc0d-29247e4f493c",
+              "name": "classe",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "d67ec4e8-a8f1-4754-90a5-12adff9f05e7",
+              "name": "vagao",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "d3fa39c5-8c8d-457e-95f5-ed1ab27a1c25",
+              "name": "status_porta",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "isPrimaryKey": false
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 126
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "9379f061-73c3-4fce-b6f0-132785766a56",
+        "type": "Table",
+        "position": {
+          "x": 1036.2811947224725,
+          "y": 332.47768032646877
+        },
+        "data": {
+          "label": "depoimentos",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "77d0524a-f035-4a3a-8b40-4cd7d371da0d",
+              "name": "id_depoimento",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "50c67034-fb29-436e-a829-2da94d101754",
+              "name": "relato",
+              "type": "VARCHAR(n)",
+              "position": 2,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "9d02417b-71e5-4cc0-8eac-5dbebb7f0d16",
+              "name": "horario_alegado",
+              "type": "DATE",
+              "position": 3,
+              "isPrimaryKey": false
+            },
+            {
+              "id": "fk_0801b49b-c94c-4d0f-b0b6-17e7be3a21e8",
+              "name": "fk_passageiros",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "6f7c4ffd-9460-47ba-ab0a-bac12c001eab",
+                "sourceTableId": "33fe72d3-b9d2-4c4b-97a8-6434d1323c84",
+                "columns": [
+                  {
+                    "id": "fk_10324289-369b-4fca-ad29-470d6224b09b",
+                    "name": "id_passaporte",
+                    "type": "INT"
+                  }
+                ]
+              }
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 127
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "02b14ebf-0108-4637-bdf3-a484971ba204",
+        "type": "Table",
+        "position": {
+          "x": 1037.5812661523444,
+          "y": 505.75885009088273
+        },
+        "data": {
+          "label": "registro_movimentacao",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "5da9eee3-aa64-480d-9f1b-74eea92ef40e",
+              "name": "id_mov",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "1fae28e8-a152-422b-8473-3cc6dae81bb7",
+              "name": "local_visto",
+              "type": "VARCHAR(n)",
+              "position": 0
+            },
+            {
+              "id": "1afaa49b-e714-49f8-83cc-5d32f1051ddc",
+              "name": "horario_visto",
+              "type": "DATE",
+              "position": 0
+            },
+            {
+              "id": "1d9f0161-42c8-4b96-b0fb-175bce4bf620",
+              "name": "detalhe_observado",
+              "type": "VARCHAR(n)",
+              "position": 0
+            },
+            {
+              "id": "fk_fe45b94a-b136-46ed-ae2b-29dc02c11746",
+              "name": "fk_passageiros",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "5933187d-1661-4f2d-9788-4050357e40d3",
+                "sourceTableId": "33fe72d3-b9d2-4c4b-97a8-6434d1323c84",
+                "columns": [
+                  {
+                    "id": "fk_10324289-369b-4fca-ad29-470d6224b09b",
+                    "name": "id_passaporte",
+                    "type": "INT"
+                  }
+                ]
+              }
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 152
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "12bd6ff5-4b58-483b-b6b6-77c2ea679e55",
+        "type": "Table",
+        "position": {
+          "x": 1641.3792624810478,
+          "y": 232.1585225025418
+        },
+        "data": {
+          "label": "solucao",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "a78efe3e-3b42-4c22-945d-43050048b51e",
+              "name": "id",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "db4f2d17-4936-4c9a-b7a4-4541114661c9",
+              "name": "assassino",
+              "type": "VARCHAR(n)",
+              "position": 0
+            },
+            {
+              "id": "cb6c4c1f-631b-4f77-ad3a-db2401a41264",
+              "name": "mensagem",
+              "type": "VARCHAR(n)",
+              "position": 0
+            }
+          ],
+          "isSelected": false,
+          "isFactTable": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 101
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "33fe72d3-b9d2-4c4b-97a8-6434d1323c84",
+        "type": "Table",
+        "position": {
+          "x": 1341.3641472578354,
+          "y": 407.74657281826364
+        },
+        "data": {
+          "label": "passageiros",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "10324289-369b-4fca-ad29-470d6224b09b",
+              "name": "id_passaporte",
+              "type": "INT",
+              "position": 0,
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "1cefda05-fa02-4e25-b505-68315aab7640",
+              "name": "nome",
+              "type": "VARCHAR(n)",
+              "position": 0,
+              "size": "5"
+            },
+            {
+              "id": "144af773-4292-4743-b653-7552d4ec2d07",
+              "name": "codinome",
+              "type": "VARCHAR(n)",
+              "position": 0
+            },
+            {
+              "id": "bde6ead8-8dd3-4f37-a5f4-eae67fda6bdf",
+              "name": "profissao",
+              "type": "VARCHAR(n)",
+              "position": 0
+            },
+            {
+              "id": "5a1fa397-fb75-4746-8268-d0c7a64f20fd",
+              "name": "nacionalidade",
+              "type": "VARCHAR(n)",
+              "position": 0
+            },
+            {
+              "id": "dcef32e1-06d5-42f4-85ea-ecb6aedc1ecc",
+              "name": "cidade_origem",
+              "type": "VARCHAR(n)",
+              "position": 0
+            },
+            {
+              "id": "c1a66d28-ab6d-479c-a366-52fcc4eb15fd",
+              "name": "bagagem_principal",
+              "type": "VARCHAR(n)",
+              "position": 0
+            },
+            {
+              "id": "95b23796-f0fd-44e7-87a3-67fe8a5e176b",
+              "name": "preferencia_jantar",
+              "type": "VARCHAR(n)",
+              "position": 0
+            },
+            {
+              "id": "fk_b20a8a75-98c8-42bb-b589-617beb3b5744",
+              "name": "fk_cabines",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "2abc0063-2031-4d09-99cd-3d025fc52a5a",
+                "sourceTableId": "70ad1117-0ef6-4d20-8f07-cf9e90a23744",
+                "columns": [
+                  {
+                    "id": "fk_110245fb-aa8c-4052-81c4-eba2cb5ebc25",
+                    "name": "num_cabine",
+                    "type": "INT"
+                  }
+                ]
+              }
+            }
+          ],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 252
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "70ad1117-0ef6-4d20-8f07-cf9e90a23744->33fe72d3-b9d2-4c4b-97a8-6434d1323c84_2abc0063-2031-4d09-99cd-3d025fc52a5a",
+        "type": "Relational",
+        "source": "70ad1117-0ef6-4d20-8f07-cf9e90a23744",
+        "targetHandle": "foreign-key-handle-2abc0063-2031-4d09-99cd-3d025fc52a5a",
+        "target": "33fe72d3-b9d2-4c4b-97a8-6434d1323c84",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "2abc0063-2031-4d09-99cd-3d025fc52a5a",
+            "sourceTableId": "70ad1117-0ef6-4d20-8f07-cf9e90a23744",
+            "columns": [
+              {
+                "id": "fk_110245fb-aa8c-4052-81c4-eba2cb5ebc25",
+                "name": "num_cabine",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "33fe72d3-b9d2-4c4b-97a8-6434d1323c84->02b14ebf-0108-4637-bdf3-a484971ba204_5933187d-1661-4f2d-9788-4050357e40d3",
+        "type": "Relational",
+        "source": "33fe72d3-b9d2-4c4b-97a8-6434d1323c84",
+        "targetHandle": "foreign-key-handle-5933187d-1661-4f2d-9788-4050357e40d3",
+        "target": "02b14ebf-0108-4637-bdf3-a484971ba204",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "5933187d-1661-4f2d-9788-4050357e40d3",
+            "sourceTableId": "33fe72d3-b9d2-4c4b-97a8-6434d1323c84",
+            "columns": [
+              {
+                "id": "fk_10324289-369b-4fca-ad29-470d6224b09b",
+                "name": "id_passaporte",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "33fe72d3-b9d2-4c4b-97a8-6434d1323c84->9379f061-73c3-4fce-b6f0-132785766a56_6f7c4ffd-9460-47ba-ab0a-bac12c001eab",
+        "type": "Relational",
+        "source": "33fe72d3-b9d2-4c4b-97a8-6434d1323c84",
+        "targetHandle": "foreign-key-handle-6f7c4ffd-9460-47ba-ab0a-bac12c001eab",
+        "target": "9379f061-73c3-4fce-b6f0-132785766a56",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "6f7c4ffd-9460-47ba-ab0a-bac12c001eab",
+            "sourceTableId": "33fe72d3-b9d2-4c4b-97a8-6434d1323c84",
+            "columns": [
+              {
+                "id": "fk_10324289-369b-4fca-ad29-470d6224b09b",
+                "name": "id_passaporte",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "viewport": {
+      "x": -1282.131220247335,
+      "y": -254.60637549671821,
+      "zoom": 1.524289596138908
+    }
+  },
+  "name": "MisterioSQL - RELACIONAL",
+  "folder": {
+    "name": "Diagrams",
+    "folderType": 1,
+    "depth": 0,
+    "id": 269710
+  },
+  "id": 462035,
+  "updatedAtTimestamp": 1779294754
+}

@@ -31,7 +31,6 @@ CREATE TABLE depoimentos (
     id_passaporte INT REFERENCES passageiros(id_passaporte),
     relato TEXT,
     horario_alegado TIME,
-    testemunha_mencionada VARCHAR(100)
 );
 
 CREATE TABLE registro_movimentacao (
