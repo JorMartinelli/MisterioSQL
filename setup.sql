@@ -30,7 +30,7 @@ CREATE TABLE depoimentos (
     id_depoimento SERIAL PRIMARY KEY,
     id_passaporte INT REFERENCES passageiros(id_passaporte),
     relato TEXT,
-    horario_alegado TIME,
+    horario_alegado TIME
 );
 
 CREATE TABLE registro_movimentacao (
