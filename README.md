@@ -1,5 +1,27 @@
 # 🚂 Mistério no Expresso do Oriente: Um Crime em SQL
 
+# 📁 Arquivo Policial: Gabinete de Investigação
+
+> 🕵️‍♂️ *"Para resolver um mistério, mon ami, não precisamos apenas de olhos atentos, mas de mentes brilhantes trabalhando em perfeita sincronia. Permita-me apresentar a equipe de investigadores que enviou os comandos SQL mais precisos de toda a Europa."* — **Hercule Poirot**
+
+---
+
+## 👥 Investigadores Responsáveis
+
+Para este caso complexo, o Diretor da Linha Férrea reuniu um comitê especial de cientistas de dados e detetives da **FGV-EMAp**:
+
+| Foto/Avatar | Detetive | Registro Funcional (RA) | Células Cinzentas Focadas Em: |
+| :---: | :--- | :---: | :--- |
+| 🕵️‍♂️ | **Cauã Fernandes Gonçalves** | 251708030 | Rastreamento e Joins de Movimentação |
+| 🕵️‍♂️ | **Davi de Oliveira Alonso Rodrigues** | 251708033 | Modelagem do Banco e Análise de Evidências |
+| 🕵️‍♂️ | **Joel Gil Medeiros de Oliveira** | 251708051 | Filtros de Depoimentos e Cláusulas WHERE |
+| 🕵️‍♀️ | **Jordana Martinelli** | 251708029 | Auditoria de Álibis e Arquivos Criminais |
+| 🕵️‍♂️ | **Miguel Fernandes de Almeida Gomes** | 251708025 | Cruzamento de Dados do Caso Armstrong |
+| 🕵️‍♂️ | **Rafael Moraes Albuquerque** | 251708039 | Consultas Avançadas e Veredito Final |
+
+---
+
+
 > 📖 *“O impossível não pode ter acontecido; portanto, o impossível deve ser possível, apesar das aparências.”* — **Hercule Poirot**
 >
 > Este projeto é uma homenagem interativa à genialidade de **Agatha Christie**, a eterna Rainha do Crime. O cenário, os personagens e a trama foram inspirados em sua obra-prima de 1934, *Assassinato no Expresso do Oriente*. Aqui, a lógica dedutiva do icônico detetive belga ganha vida através de consultas SQL. Prepare sua mente, ajuste seus bigodes e boa investigação!
